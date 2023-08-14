@@ -37,6 +37,14 @@
                 </div>
             </div>
         </div>
+
+        <!--Modal Here-->
+
+        <div class="w-full h-screen bg-black">
+            <div>
+
+            </div>
+        </div>
         
     </body>
     <script>
@@ -117,17 +125,17 @@
             
             let grade = totalGrade/5
 
-            // if(grd1 > 100 || grd2 > 100 || grd3 > 100 || grd4 > 100 || grd5 > 100) {
+            if(grd1 > 100 || grd2 > 100 || grd3 > 100 || grd4 > 100 || grd5 > 100 && grd1 == 0 || grd2 == 0 || grd3 == 0 || grd4 == 0 || grd5 == 0) {
 
-            //     alert("Please input Grade within the range of 100!");
-            // }
+                alert("Please input Grade within the range of 100!");
+            }
             
-            // else {
+            else {
                 
-            //     document.getElementById('markgrade').innerHTML = "This is your Grade: " + Grade
+                alert("Please input Grade!");
 
                
-            // }
+            }
 
             if(grade <= 100 && grade >= 90) {
 
