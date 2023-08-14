@@ -9,8 +9,7 @@
         <div class="w-full h-full flex justify-center align-center">
             <div class="w-[400px] h-[700px] border-4 border-sky-700 self-center">
                 <div class="border-b-2 py-2 font-bold bg-black text-white flex justify-center">
-                    <h2 class="text-xl italic
-                    ">Grading System</h2>
+                    <h2 class="text-xl italic">Grading System</h2>
                 </div>
                 <div class="grid grid-cols-2 gap-2 my-4">
                     <label for="" class="text-end italic font-bold">English:</label><input type="number" name="" class="border-2 border-black w-[50px]" id="eng">
@@ -40,11 +39,11 @@
 
         <!--Modal Here-->
 
-        <div class="w-full h-screen bg-black opacity-50">
-            <div>
+        <!-- <div class="w-full h-screen bg-black opacity-50">
+            <div class="w-[300px] h-[250px] flex justify-center align-center border-2 self-center">
 
             </div>
-        </div>
+        </div> -->
         
     </body>
     <script>
@@ -106,6 +105,11 @@
                 alert("Please input Grades within the range of 100!");
             }
 
+            else if(average <= ""){
+
+                alert("Please put Grades!");
+            }
+
             else {
                 document.getElementById('markave').innerHTML = "Your Average is: " + average;
 
@@ -125,14 +129,20 @@
             
             let grade = totalGrade/5
 
-            if(grd1 > 100 || grd2 > 100 || grd3 > 100 || grd4 > 100 || grd5 > 100 && grd1 == 0 || grd2 == 0 || grd3 == 0 || grd4 == 0 || grd5 == 0) {
+            if(grd1 > 100 || grd2 > 100 || grd3 > 100 || grd4 > 100 || grd5 > 100) {
 
                 alert("Please input Grade within the range of 100!");
             }
             
-            else {
+            else if (grd1 == 0 || grd2 == 0 || grd3 == 0 || grd4 == 0 || grd5 == 0) {
                 
                 alert("Please input Grade!");
+
+            }
+
+            else {
+
+                document.getElementById('markgrade').innerHTML = "Please put the correct grade!"
 
             }
 
@@ -164,6 +174,8 @@
 
                 document.getElementById('markgrade').innerHTML = "Your Grade is F <br> Your Remark is Failed!"
             }
+
+            
             
         }
 
