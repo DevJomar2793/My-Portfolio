@@ -6,8 +6,8 @@
         <title>Grading System</title>
     </head>
     <body>
-        <div class="w-full h-screen flex justify-center align-center">
-            <div class="w-[400px] h-[600px] border-4 border-sky-700 self-center">
+        <div class="w-full h-full flex justify-center align-center">
+            <div class="w-[400px] h-[700px] border-4 border-sky-700 self-center">
                 <div class="border-b-2 py-2 font-bold bg-black text-white flex justify-center">
                     <h2 class="text-xl italic
                     ">Grading System</h2>
@@ -21,11 +21,19 @@
                 </div>
                 <div class="flex justify-evenly my-4">
                     <button type="button" class="border-2 px-4 py-2 rounded-lg text-black font-bold bg-btnColor transition ease-in-out delay-150 hover:-y-translate-1 hover:scale-125 duration-300 hover:font-bold" onclick="Total()">Total</button>
-                    <button class="border-2 px-4 py-2 rounded-lg text-black font-bold bg-btnColor transition ease-in-out delay-150 hover:-y-translate-1 hover:scale-125 duration-300 hover:font-bold">Average</button>
-                    <button class="border-2 px-4 py-2 rounded-lg text-black font-bold bg-btnColor transition ease-in-out delay-150 hover:-y-translate-1 hover:scale-125 duration-300 hover:font-bold">Grade</button>
+                    <button class="border-2 px-4 py-2 rounded-lg text-black font-bold bg-btnColor transition ease-in-out delay-150 hover:-y-translate-1 hover:scale-125 duration-300 hover:font-bold" onclick="Average()">Average</button>
+                    <button class="border-2 px-4 py-2 rounded-lg text-black font-bold bg-btnColor transition ease-in-out delay-150 hover:-y-translate-1 hover:scale-125 duration-300 hover:font-bold" onclick="Grade()">Remarks</button>
                 </div>
                 <div>
-                    <h4 id="mark" class="text-2xl">Your Total Score here:</h4>
+                    <h4 id="markTotal" class="text-2xl">Your Total Score here:</h4>
+                </div>
+
+                <div>
+                    <h4 id="markave" class="text-2xl">Your Average Score here:</h4>
+                </div>
+
+                <div>
+                    <h4 id="markgrade" class="text-2xl">Your Grade Score here:</h4>
                 </div>
             </div>
         </div>
@@ -64,8 +72,93 @@
             }
 
             else {
-                document.getElementById('mark').innerHTML = "English Score: " + sub1 + "<br> Math Score: " + sub2 + "<br> Physics Score: " + sub3 + "<br> Chemisty Score: " + sub4 + "<br> Computer Score: " + sub5 + "<br><br> Total Score: " + totalScore 
+                document.getElementById('markTotal').innerHTML = "English Score: " + sub1 + "<br> Math Score: " + sub2 + "<br> Physics Score: " + sub3 + "<br> Chemisty Score: " + sub4 + "<br> Computer Score: " + sub5 + "<br><br> Total Score: " + totalScore 
             }
         }
+
+        function Average(){
+            
+            let ave1 = parseInt(document.getElementById('eng').value);
+            let ave2 = parseInt(document.getElementById('mth').value);
+            let ave3 = parseInt(document.getElementById('phy').value);
+            let ave4 = parseInt(document.getElementById('che').value);
+            let ave5 = parseInt(document.getElementById('com').value);
+
+            let totalAve = ave1 + ave2 + ave3 + ave4 + ave5;
+            
+            let average = totalAve/5;
+
+            if(ave1 == 0 || ave2 == 0 || ave3 == 0 || ave4 == 0 || ave5 == 0){
+
+                alert("Please input Grades!");
+            }
+
+            else if(ave1 > 100 || ave2 > 100 || ave3 > 100 || ave4 > 100 || ave5 > 100){
+
+                alert("Please input Grades within the range of 100!");
+            }
+
+            else {
+                document.getElementById('markave').innerHTML = "Your Average is: " + average;
+
+                
+            }
+        }
+
+        function Grade(){
+
+            let grd1 = parseInt(document.getElementById('eng').value);
+            let grd2 = parseInt(document.getElementById('mth').value);
+            let grd3 = parseInt(document.getElementById('phy').value);
+            let grd4 = parseInt(document.getElementById('che').value);
+            let grd5 = parseInt(document.getElementById('com').value);
+
+            let totalGrade = grd1 + grd2 + grd3 + grd4 + grd5
+            
+            let grade = totalGrade/5
+
+            // if(grd1 > 100 || grd2 > 100 || grd3 > 100 || grd4 > 100 || grd5 > 100) {
+
+            //     alert("Please input Grade within the range of 100!");
+            // }
+            
+            // else {
+                
+            //     document.getElementById('markgrade').innerHTML = "This is your Grade: " + Grade
+
+               
+            // }
+
+            if(grade <= 100 && grade >= 90) {
+
+                document.getElementById('markgrade').innerHTML = "Your Grade is A+ <br> Your Remark is Outstanding!" 
+            }
+
+            
+            else if (grade >= 85 && grade <= 89){
+
+                document.getElementById('markgrade').innerHTML = "Your Grade is A <br> Your Remark is Very Satisfactory!"
+            }
+
+            else if (grade >= 80 && grade <= 84){
+
+                document.getElementById('markgrade').innerHTML = "Your Grade is A- <br> Your Remark is Satisfactory!"
+                
+            }
+
+            else if (grade >= 75 && grade <= 79){
+
+                document.getElementById('markgrade').innerHTML = "Your Grade is B+ <br> Your Remark is Fairly Satisfactory!"
+
+            }
+
+            
+            else {
+
+                document.getElementById('markgrade').innerHTML = "Your Grade is F <br> Your Remark is Failed!"
+            }
+            
+        }
+
     </script>
 </html>
