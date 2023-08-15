@@ -6,8 +6,8 @@
         <title>Grading System</title>
     </head>
     <body>
-        <div class="w-full h-full flex justify-center align-center">
-            <div class="w-[400px] h-[700px] border-4 border-sky-700 self-center">
+        <div class="w-full h-full flex justify-center gap-0 align-center">
+            <div class="w-[400px] h-[400px] border-4 border-sky-700 self-center">
                 <div class="border-b-2 py-2 font-bold bg-black text-white flex justify-center">
                     <h2 class="text-xl italic">Grading System</h2>
                 </div>
@@ -23,28 +23,52 @@
                     <button class="border-2 px-4 py-2 rounded-lg text-black font-bold bg-btnColor transition ease-in-out delay-150 hover:-y-translate-1 hover:scale-125 duration-300 hover:font-bold" onclick="Average()">Average</button>
                     <button class="border-2 px-4 py-2 rounded-lg text-black font-bold bg-btnColor transition ease-in-out delay-150 hover:-y-translate-1 hover:scale-125 duration-300 hover:font-bold" onclick="Grade()">Remarks</button>
                 </div>
-                <div>
-                    <h4 id="markTotal" class="text-2xl">Your Total Score here:</h4>
-                </div>
-
-                <div>
-                    <h4 id="markave" class="text-2xl">Your Average Score here:</h4>
-                </div>
-
-                <div>
-                    <h4 id="markgrade" class="text-2xl">Your Grade Score here:</h4>
+            </div>
+            <div class="border-4 border-sky-700">
+                <div class="w-[400px] h-screen">
+                    <div class="border-2 flex justify-center py-2 m-auto bg-black">
+                        <h4 class="text-2xl italic font-bold text-white">Total Score:</h4>
+                    </div>
+                    <div class="m-auto py-4 text-center space-y-2">
+                        <div class="grid grid-cols-2 gap-0 space-x-4">
+                            <label class="text-2xl italic font-bold" for="">English: </label>
+                            <h4 id="engTotal" class="text-2xl font-bold italic">0</h4>
+                        </div>
+                        <div class="grid grid-cols-2 gap-0 space-x-4">
+                            <label class="text-2xl italic font-bold" for="">Math: </label>
+                            <h4 id="mthTotal" class="text-2xl font-bold italic">0</h4>
+                        </div>
+                        <div class="grid grid-cols-2 gap-0 space-x-4">
+                            <label class="text-2xl italic font-bold" for="">Physics: </label>
+                            <h4 id="phyTotal" class="text-2xl font-bold italic">0</h4>
+                        </div>
+                        <div class="grid grid-cols-2 gap-0 space-x-4">
+                            <label class="text-2xl italic font-bold" for="">Chemistry: </label>
+                            <h4 id="cheTotal" class="text-2xl font-bold italic">0</h4>
+                        </div>
+                        <div class="grid grid-cols-2 gap-0 space-x-4">
+                            <label class="text-2xl italic font-bold" for="">Computer: </label>
+                            <h4 id="comTotal" class="text-2xl font-bold italic">0</h4>
+                        </div>
+                        <div class="grid grid-cols-2 gap-0 space-x-4">
+                            <label class="text-4xl italic font-bold" for="">Total: </label>
+                            <h4 id="markTotal" class="text-4xl font-bold italic">0</h4>
+                        </div>
+                        <div class="grid grid-cols-2 gap-0 space-x-4">
+                            <label class="text-4xl italic font-bold" for="">Average: </label>
+                            <h4 id="markAverage" class="text-4xl font-bold italic">0</h4>
+                        </div>
+                        <div class="grid grid-cols-2 gap-0 space-x-4">
+                            <label class="text-4xl italic font-bold" for="">Grade: </label>
+                            <h4 id="markGrade" class="text-4xl font-bold italic">0</h4>
+                            <label class="text-4xl italic font-bold" for="">Remarks: </label>
+                            <h4 id="markRemark" class="text-2xl font-bold italic"></h4>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!--Modal Here-->
-
-        <!-- <div class="w-full h-screen bg-black opacity-50">
-            <div class="w-[300px] h-[250px] flex justify-center align-center border-2 self-center">
-
-            </div>
-        </div> -->
-        
     </body>
     <script>
          tailwind.config = {
@@ -79,8 +103,18 @@
             }
 
             else {
-                document.getElementById('markTotal').innerHTML = "English Score: " + sub1 + "<br> Math Score: " + sub2 + "<br> Physics Score: " + sub3 + "<br> Chemisty Score: " + sub4 + "<br> Computer Score: " + sub5 + "<br><br> Total Score: " + totalScore 
+                document.getElementById('markTotal').innerText = totalScore
             }
+
+            document.getElementById('engTotal').innerText = sub1
+            document.getElementById('mthTotal').innerText = sub2
+            document.getElementById('phyTotal').innerText = sub3
+            document.getElementById('cheTotal').innerText = sub4
+            document.getElementById('comTotal').innerText = sub5
+
+            
+
+        
         }
 
         function Average(){
@@ -111,7 +145,7 @@
             }
 
             else {
-                document.getElementById('markave').innerHTML = "Your Average is: " + average;
+                document.getElementById('markAverage').innerText = average
 
                 
             }
@@ -126,53 +160,69 @@
             let grd5 = parseInt(document.getElementById('com').value);
 
             let totalGrade = grd1 + grd2 + grd3 + grd4 + grd5
+
+            let gradeAPlus = "A+"
+            let gradeRemarksAPlus = "Outstanding"
+
+            let gradeA = "A"
+            let gradeRemarksA = "Very Satisfactory"
+
+            let gradeAMinus = "A-"
+            let gradeRemarksAMinus = "Satisfactory"
+
+            let gradeBPlus = "B+"
+            let gradeRemarksBPlus = "Fairly Satisfactory"
+
+            let gradeF = "F"
+            let gradeRemarksF = "Failed"
             
             let grade = totalGrade/5
 
-            if(grd1 > 100 || grd2 > 100 || grd3 > 100 || grd4 > 100 || grd5 > 100) {
+            if(grd1 > 100 || grd2 > 100 || grd3 > 100 || grd4 > 100 || grd5 > 100 ) {
 
                 alert("Please input Grade within the range of 100!");
             }
             
-            else if (grd1 == 0 || grd2 == 0 || grd3 == 0 || grd4 == 0 || grd5 == 0) {
+            if (grd1 == 0 || grd2 == 0 || grd3 == 0 || grd4 == 0 || grd5 == 0){
                 
                 alert("Please input Grade!");
 
             }
 
-            else {
-
-                document.getElementById('markgrade').innerHTML = "Please put the correct grade!"
-
-            }
+            
 
             if(grade <= 100 && grade >= 90) {
 
-                document.getElementById('markgrade').innerHTML = "Your Grade is A+ <br> Your Remark is Outstanding!" 
+                document.getElementById('markGrade').innerText = gradeAPlus
+                document.getElementById('markRemark').innerText = gradeRemarksAPlus
             }
 
             
             else if (grade >= 85 && grade <= 89){
 
-                document.getElementById('markgrade').innerHTML = "Your Grade is A <br> Your Remark is Very Satisfactory!"
+                document.getElementById('markGrade').innerText = gradeA
+                document.getElementById('markRemark').innerText = gradeRemarksA
             }
 
             else if (grade >= 80 && grade <= 84){
 
-                document.getElementById('markgrade').innerHTML = "Your Grade is A- <br> Your Remark is Satisfactory!"
+                document.getElementById('markGrade').innerText = gradeAMinus
+                document.getElementById('markRemark').innerText = gradeRemarksAMinus
                 
             }
 
             else if (grade >= 75 && grade <= 79){
 
-                document.getElementById('markgrade').innerHTML = "Your Grade is B+ <br> Your Remark is Fairly Satisfactory!"
+                document.getElementById('markGrade').innerText = gradeBPlus
+                document.getElementById('markRemark').innerText = gradeRemarksBPlus
 
             }
 
             
             else {
 
-                document.getElementById('markgrade').innerHTML = "Your Grade is F <br> Your Remark is Failed!"
+                document.getElementById('markGrade').innerText = gradeF
+                document.getElementById('markRemark').innerText = gradeRemarksF
             }
 
             
