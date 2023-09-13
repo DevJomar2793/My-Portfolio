@@ -31,26 +31,56 @@
 
 // 2. Write a JavaScript function that returns a passed string with letters in alphabetical order
 
-const inputName = document.querySelector('#name')
-const submitButton = document.querySelector('#submit')
+// const inputName = document.querySelector('#name')
+// const submitButton = document.querySelector('#submit')
 
+
+// submitButton.addEventListener('click', () => {
+
+//     let input = inputName.value
+
+//     function alphaOrder(str) {
+
+//         return str.split('').sort().join('')
+//     }
+    
+    
+//     setTimeout(() => {
+        
+//         const inputOrder = alphaOrder(input)
+
+//         console.log(inputOrder)
+    
+//     }, 3000);
+// })
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// 3. Write a JavaScript function that accepts a string as a parameter and counts the number of vowels within the string.
+
+const inputName = document.querySelector("#name")
+const submitButton = document.querySelector("#submit")
 
 submitButton.addEventListener('click', () => {
 
-    let input = inputName.value
 
-    function alphaOrder(str) {
+    function matchVowel(str) {
 
-        return str.split('').sort().join('')
+        return str.match(/[aeiouAEIOU]/g).length
+
     }
     
     
     setTimeout(() => {
+
+        let input = inputName.value
+
+        const nameMatch = matchVowel(input)
+
+        console.log(nameMatch)
+
+        document.getElementById('ans').innerHTML = nameMatch
         
-        const inputOrder = alphaOrder(input)
-
-        console.log(inputOrder)
-    
     }, 3000);
-})
 
+})
