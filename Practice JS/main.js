@@ -385,23 +385,269 @@
 
 //10. Return the number of vowels in a string
     
-const inputName = document.querySelector('#input')
-const submitButton = document.querySelector("#submit")
+// const inputName = document.querySelector('#input')
+// const submitButton = document.querySelector("#submit")
 
-submitButton.addEventListener('click', () => {
+// submitButton.addEventListener('click', () => {
 
-    let name = inputName.value
+//     let name = inputName.value
 
-    function vowelsString(str) {
+//     function vowelsString(str) {
 
-      const vowels = str.match(/[aeiou]/gi).length
+//       const vowels = str.match(/[aeiou]/gi).length
 
-        return vowels
+//         return vowels
 
-     }
+//      }
 
-     alert(vowelsString(name))
-})
+//      alert(vowelsString(name))
+// })
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+//11. Return the Sum of Two Numbers
+
+
+// const submitButton = document.querySelector("#submit")
+
+// submitButton.addEventListener('click', () => {
+
+//   function sumNumber(num1, num2) {
+    
+//     let sum
+
+//     sum = 5 + 5 
+
+//     return sum
+
+//   }
+
+// alert(sumNumber())
+
+// })
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+//12. The Recipe Card
+
+// const recipe = {
+  
+//   'title': 'Mole',
+//   'servings': 2,
+//   'ingredients': ['Cinnamon', 'Cumin', 'Cocoa']
+
+// }
+
+// console.log('Title: ' + recipe.title)
+// console.log('Servings: ' + recipe.servings)
+// console.log('Ingredients: ')
+
+
+// for (let i = 0; i < recipe.ingredients.length; i++) {
+//     console.log(recipe.ingredients[i])
+// }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+//13. TThe Reading List
+
+// const readingList = [
+//   {
+//     title: 'The Design of Everyday Things',
+//     author: 'Don Norman',
+//     alreadyRead: false
+//   },
+//   {
+//     title: 'The Most Human Human',
+//     author: 'Brian Christian',
+//     alreadyRead: true
+//   }
+// ]
+
+// for (let i = 0; i < readingList.length; i++) {
+//   readList = readingList[i]
+//   const bookInfo = 'Title: ' + readList.title + " " + "by" + " " + "Author: " + readList.author
+//   // console.log(bookInfo)
+  
+//   const boolean = readList.alreadyRead ? "You Already Read" + bookInfo: "You Still need to read" + bookInfo
+
+//   console.log(boolean)
+
+
+// }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+//13. Return Age > 18
+
+// const family = [
+//   {
+//     name: 'Jomar',
+//     age: 30,
+//     aboveAge: true
+
+//   },
+//   {
+//     name: 'Arisa',
+//     age: 25,
+//     aboveAge: true
+//   },
+//   {
+//     name: 'Elliana Jae',
+//     age: 1,
+//     aboveAge: false
+//   }
+// ]
+
+// for (let i = 0; i < family.length; i++) {
+//     pamilya = family[i]
+//     pamilya1 = "name: " + pamilya.name + " " + "age: " + pamilya.age
+    
+//    const ageLegal = pamilya.age > 18 ? "Your in Legal Age " + pamilya1: "Your not in legal Age " + pamilya1
+
+//    console.log(ageLegal)
+    
+// }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+//14. Bound Copies Print Full name and details
+
+// const fullDetails = [
+//   {
+//     firstname: 'Jomar',
+//     lastname: 'Cerrado',
+//     age: 30
+
+//   },
+//   {
+//     firstname: 'Arisa',
+//     lastname: 'Acopiado',
+//     age: 25
+//   },
+//   {
+//     firstname: 'Elliana Jae',
+//     lastname: 'Cerrado',
+//     middlename: 'Acopiado',
+//     age: 1
+//   }
+
+// ]
+
+// for (let i = 0; i < fullDetails.length; i++) {
+//       const boundFullName = fullDetails[i]
+
+//       console.log("My name is " + boundFullName.firstname + " " + boundFullName.lastname )
+
+//       console.log("My age is " + boundFullName.age + " Year/s old" )
+
+
+// }
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+//W3Source Object Exercise
+
+//1. Write a JavaScript program to list the properties of a JavaScript object.
+
+// const person = {
+//   firstname: 'Jomar',
+//   lastname: 'Cerrado',
+//   age: 30
+// }
+
+// console.log("My name is " + person.firstname + " " + person.lastname)
+// console.log("My age is " + person.age)
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+//2. Write a JavaScript program to delete the rollno property from the following object. Also print the object before or after deleting the property.
+
+// const student = {
+//   name: 'Jomar',
+//   age: 30,
+//   course: 'BSIT',
+//   year: '1st Year'
+// }
+
+
+// const summary = student
+// console.log(summary)
+// delete student.age
+// console.log(summary)
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+//3. Write a JavaScript program to get the length of a JavaScript object.
+
+// const library = [
+//   {
+//     title: 'ABSALOM, ABSALOM!',
+//     author: 'WILLIAM FAULKNER',
+//     date: '1936', 
+//     alreadyRead: true
+//   },
+//   {
+//     title: 'A TIME TO KILL',
+//     author: 'JOHN GRISHAM',
+//     date: '1862', 
+//     alreadyRead: false
+//   },
+//   {
+//     title: 'THE HOUSE OF MIRTH',
+//     author: 'EDITH WHARTON',
+//     date: '1905', 
+//     alreadyRead: true
+//   },
+//   {
+//     title: 'EAST OF EDEN',
+//     author: 'JOHN STEINBECK',
+//     date: '1952', 
+//     alreadyRead: false
+//   },
+//   {
+//     title: 'THE SUN ALSO RISES',
+//     author: 'ERNEST HEMINGWAY',
+//     date: '1926', 
+//     alreadyRead: true
+//   },
+  
+// ]
+
+
+// for (let i = 0; i < library.length; i++) {
+
+//   let book = library[i]
+
+//   let summary = book.title + " " + book.author
+
+
+
+//   const displayBooks = book.alreadyRead ? "These is the book you already read: " + summary: "These is the book that you need to read: " + summary
+
+// console.log(displayBooks)
+
+// }
+
+
+// setInterval(myFunction, 1000)
+
+
+// function myFunction() {
+
+// let d = new Date()
+
+// console.log(d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds() )
+// }
+
+
+
+
+
+
+
 
     
 
