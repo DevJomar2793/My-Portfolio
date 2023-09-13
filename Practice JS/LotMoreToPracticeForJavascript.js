@@ -50,6 +50,8 @@
 //         const inputOrder = alphaOrder(input)
 
 //         console.log(inputOrder)
+
+//         document.getElementById("ans").innerHTML = inputOrder
     
 //     }, 3000);
 // })
@@ -79,7 +81,7 @@ submitButton.addEventListener('click', () => {
 
         console.log(nameMatch)
 
-        document.getElementById('ans').innerHTML = nameMatch
+        document.getElementById('ans').innerHTML = "Vowel Count: " + nameMatch
         
     }, 3000);
 
