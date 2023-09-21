@@ -126,7 +126,7 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// 5. Write a JavaScript program to get the current date. (Not yet Done)
+// 5. Write a JavaScript program to get the current date. (NOT YET DONE)
 
 // const today = new Date()
 // const dd = today.getDate()
@@ -308,57 +308,182 @@
 
 // 8. Write a JavaScript conditional statement to find the sign of product of three numbers. Display an alert box with the specified sign.
 
-const inputNumber1 = document.querySelector('#input1')
-const inputNumber2 = document.querySelector('#input2')
-const inputNumber3 = document.querySelector('#input3')
-const submitButton = document.querySelector('#submit')
+// const inputNumber1 = document.querySelector('#input1')
+// const inputNumber2 = document.querySelector('#input2')
+// const inputNumber3 = document.querySelector('#input3')
+// const submitButton = document.querySelector('#submit')
 
 
-submitButton.addEventListener('click', () => {
+// submitButton.addEventListener('click', () => {
 
-    let input1 = inputNumber1.value
-    let input2 = inputNumber2.value
-    let input3 = inputNumber3.value
+//     let input1 = inputNumber1.value
+//     let input2 = inputNumber2.value
+//     let input3 = inputNumber3.value
 
-    setTimeout(() => {
+//     setTimeout(() => {
         
-        if(input1 > 0 && input2 > 0 && input3 > 0) {
+//         if(input1 > 0 && input2 > 0 && input3 > 0) {
 
-            document.getElementById('ans').innerHTML = "This is a Positive Numbers"
+//             document.getElementById('ans').innerHTML = "This is a Positive Numbers"
     
-        } else if (input1 < 0 && input2 > 0 && input3 > 0) {
+//         } else if (input1 < 0 && input2 > 0 && input3 > 0) {
     
-            document.getElementById('ans').innerHTML = "Number 1 is a Negative Number"
+//             document.getElementById('ans').innerHTML = "Number 1 is a Negative Number"
     
-        } else if (input1 > 0 && input2 < 0 && input3 > 0) {
+//         } else if (input1 > 0 && input2 < 0 && input3 > 0) {
     
-            document.getElementById('ans').innerHTML = "Number 2 is a Negative Number"
+//             document.getElementById('ans').innerHTML = "Number 2 is a Negative Number"
     
-        } else if (input1 > 0 && input2 > 0 && input3 < 0) {
+//         } else if (input1 > 0 && input2 > 0 && input3 < 0) {
     
-            document.getElementById('ans').innerHTML = "Number 3 is a Negative Number"
+//             document.getElementById('ans').innerHTML = "Number 3 is a Negative Number"
     
-        } else if (input1 < 0 && input2 < 0 && input3 > 0) {
+//         } else if (input1 < 0 && input2 < 0 && input3 > 0) {
     
-           document.getElementById('ans').innerHTML = "Number 1 & Number 2 is a Negative Numbers"
+//            document.getElementById('ans').innerHTML = "Number 1 & Number 2 is a Negative Numbers"
         
-        } else if (input1 > 0 && input2 < 0 && input3 < 0) {
+//         } else if (input1 > 0 && input2 < 0 && input3 < 0) {
     
-            document.getElementById('ans').innerHTML = "Number 2 & Number 3 is a Negative Numbers"
+//             document.getElementById('ans').innerHTML = "Number 2 & Number 3 is a Negative Numbers"
     
-        } else if (input1 < 0 && input2 > 0 && input3 < 0) {
+//         } else if (input1 < 0 && input2 > 0 && input3 < 0) {
     
-            document.getElementById('ans').innerHTML = "Number 1 & Number 3 is a Negative Numbers"
-        }
+//             document.getElementById('ans').innerHTML = "Number 1 & Number 3 is a Negative Numbers"
+//         }
         
-        else {
+//         else {
     
-            document.getElementById('ans').innerHTML = "This is a negative Numbers"
-        }
+//             document.getElementById('ans').innerHTML = "This is a negative Numbers"
+//         }
     
-    }, 1000);
+//     }, 1000);
     
-})
+// })
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// 9. Write a JavaScript function to check whether an `input` is an array or not. (NOT YET DONE)
+
+// const inputName = document.querySelector('#input')
+// const submitButton = document.querySelector('#submit')
+
+
+// submitButton.addEventListener('click', () => {
+
+//     let input1 = inputName.value
+
+//     const is_array = function (input) {
+
+//         if(toString.call(input) === "[object Array]") 
+    
+//             return true
+//             return false
+    
+//     }
+
+//     console.log(is_array(input1))
+
+// })
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// 10. Write a JavaScript function to clone an array.
+
+// array_clone = function (arra1) {
+
+//     return arra1.slice(0)   
+// }
+
+// console.log(array_clone([1, 2, 3, 4]))
+// console.log(array_clone([1, 2, [3, 4]]))
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// 11. Write a simple JavaScript program to join all elements of the following array into a string.
+
+// const myArray = ["Orange", "Lemon", "Apple", "Banana", "Grapes"]
+
+// console.log(myArray.toString())
+
+// console.log(myArray.join())
+
+// console.log(myArray.join('+'))
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// 12. Write a JavaScript program to sort the items of an array.
+
+
+// const myArray = [-2, 0, 6, -8, -10, 23, 4, 100, -523]
+
+// function compareArray(a, b) {
+
+//     return a - b
+// }
+
+// console.log(myArray.join())
+
+// console.log(myArray.sort())
+
+// console.log(myArray.sort(compareArray))
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// 12. Write a JavaScript program to display the colors in the following way
+
+const myColor = ['blue', 'yellow', 'black', 'red', 'violet']
+
+const myChoice = ['First Choice', 'Second Choice', 'Third Choice', 'Fourth Choice', 'Fifth Choice']
+
+
+
+
+
+function thisChoice() {
+
+    for(let i = 0; i < myColor.length; i++) {
+
+      let  color += myColor[i]
+
+       return i
+    }
+}
+
+console.log(thisChoice())
+
+
+// for (let x = 0; x < myChoice.length; x++){
+
+//     let choice = myChoice[x]
+    
+//     console.log(choice)
+// }
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+   
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
