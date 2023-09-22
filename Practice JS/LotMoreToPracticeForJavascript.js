@@ -443,7 +443,7 @@ function thisChoice() {
 
     for(let i = 0; i < myColor.length; i++) {
 
-      let  color += myColor[i]
+      let color = myColor[i]
 
        return i
     }
