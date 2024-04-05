@@ -47,17 +47,17 @@
             <div class="modal fade" id="averageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="flex space-x-1 modal-body">
-                        <h4 class="text-center text-sky-900 font-black text-2xl" >Your Average:</h4>
-                        <h4 class="text-center text-sky-900 font-black text-2xl" id="resultAverage">Test</h4>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
+                        <div class="bg-sky-500/75 modal-header">
+                            <h1 class="text-white font-bold text-2xl modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="flex space-x-1 modal-body">
+                            <h4 class="text-center text-sky-900 font-black text-2xl" >Your Average:</h4>
+                            <h4 class="text-center text-sky-900 font-black text-2xl" id="resultAverage">Test</h4>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="px-4 py-2 rounded-md bg-sky-500/75 text-white text-xl font-medium" data-bs-dismiss="modal">Close</button>
+                        </div>
                     </div>
                 </div>
             </div>
