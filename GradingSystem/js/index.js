@@ -1,7 +1,5 @@
 //Average Function
 
-
-
 const btnAverage = document.querySelector("#averageGrade");
 const btncloseAverage = document.querySelector("#closeAverage");
 
@@ -50,6 +48,11 @@ btnAverage.addEventListener('click', ()=> {
 
     document.getElementById("resultAverage").innerHTML = totalGrade();
 
+    function inputValidation() {
+
+        sub11 = document.querySelector("#english");
+    }
+
 });
 
 btncloseAverage.addEventListener('click', ()=> {
@@ -69,7 +72,6 @@ btncloseAverage.addEventListener('click', ()=> {
 });
     
 
-//Rating Function
 
 
 
