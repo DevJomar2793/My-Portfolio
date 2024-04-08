@@ -1,5 +1,7 @@
 //Average Function
 
+
+
 const btnAverage = document.querySelector("#averageGrade");
 const btncloseAverage = document.querySelector("#closeAverage");
 
@@ -21,15 +23,29 @@ btnAverage.addEventListener('click', ()=> {
       
     }
 
-    if(totalGrade() == 100 && totalGrade() >= 90)  {
+    if(totalGrade() <= 100 && totalGrade() >= 90)  {
         document.getElementById("resultDescription").innerHTML = "Outstanding";
         document.getElementById("resultRemarks").innerHTML = "Passed";
     }
     else if(totalGrade() <= 89 && totalGrade() >= 85) {
         document.getElementById("resultDescription").innerHTML = "Very Satisfactory";
         document.getElementById("resultRemarks").innerHTML = "Passed";
-    }    
-
+        console.log("passed")
+    } 
+    else if(totalGrade() >= 80 && totalGrade <= 84) {
+        document.getElementById("resultDescription").innerHTML = "Satisfactory";
+        document.getElementById("resultRemarks").innerHTML = "Passed";
+        console.log("passed")
+    }
+    else if(totalGrade() >= 75 && totalGrade() <= 79) {
+        document.getElementById("resultDescription").innerHTML = "Fairly Satisfactory";
+        document.getElementById("resultRemarks").innerHTML = "Passed";
+        console.log("passed")
+    } 
+    else {
+        document.getElementById("resultDescription").innerHTML = "Did not meet expectation";
+        document.getElementById("resultRemarks").innerHTML = "Failed";
+    }
 
 
     document.getElementById("resultAverage").innerHTML = totalGrade();
