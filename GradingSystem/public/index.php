@@ -12,9 +12,12 @@
     </head>
     <body>
         <div class="w-full h-screen bg-cover flex align-center justify-center " style="background-image: url('../design/Hallway.jpg')">
-            <div class="w-[400px] h-[500px] self-center bg-slate/70 backdrop-blur-xl bg border-gray-500 shadow-2xl rounded-md" >
+            <div class="w-[400px] h-[550px] self-center bg-slate/70 backdrop-blur-xl bg border-gray-500 shadow-2xl rounded-md" >
                 <div class="p-2 text-center text-lg bg-sky-500/75 rounded-md">
                     <h1 class="text-white font-bold text-2xl">Grading System</h1>
+                </div>
+                <div class="flex justify-end my-2 px-2">
+                    <input class="px-1 py-1 rounded-md bg-sky-500/75 text-white text-xl font-medium" data-bs-toggle="modal" data-bs-target="#remarksModal" type="submit" id="remarksRef" name="" value="Remarks Reference">
                 </div>
                 <div class="m-2 my-2 py-8 space-y-4">
                     <form class="grid grid-cols-2 gap-4" action="">
@@ -38,9 +41,8 @@
                         <input class="w-[100px] text-2xl font-semibold px-2 text-center rounded-md" type="number" name="" id="computer">
                     </form>
                 </div>
-                <div class="flex justify-evenly">
+                <div class="flex justify-center space-x-1">
                     <input class="px-4 py-2 rounded-md bg-sky-500/75 text-white text-xl font-medium" data-bs-toggle="modal" data-bs-target="#averageModal" type="submit" id="averageGrade" name="" value="Average">
-                    <input class="px-4 py-2 rounded-md bg-sky-500/75 text-white text-xl font-medium" data-bs-toggle="modal" data-bs-target="#remarksModal" type="submit" id="remarksGrade" name="" value="Remarks">
                 </div>
             </div>
             <!--Average Modal-->
@@ -48,12 +50,38 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="bg-sky-500/75 modal-header">
-                            <h1 class="text-white font-bold text-2xl modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                            <h1 class="text-white font-bold text-2xl modal-title fs-5" id="exampleModalLabel">Total Grade</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="flex space-x-1 modal-body">
                             <h4 class="text-center text-sky-900 font-black text-2xl" >Your Average:</h4>
-                            <h4 class="text-center text-sky-900 font-black text-2xl" id="resultAverage">Test</h4>
+                            <h4 class="text-center text-sky-900 font-black text-2xl" id="resultAverage"></h4>
+                        </div>
+                        <div class="grid justify-items-start space-x-1 modal-body">
+                            <h4 class="text-center text-sky-900 font-black text-2xl" >Your Rating:</h4>
+                            <h4 class="text-center text-sky-900 font-black text-2xl" id="resultDescription">Test</h4>
+                            <h4 class="text-center text-sky-900 font-black text-2xl" >Remarks:</h4>
+                            <h4 class="text-center text-sky-900 font-black text-2xl" id="resultRemarks">Test</h4>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="px-4 py-2 rounded-md bg-sky-500/75 text-white text-xl font-medium" data-bs-dismiss="modal" id="closeAverage">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Remarks Reference Modal-->
+            <div class="modal fade" id="remarksModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="bg-sky-500/75 modal-header">
+                            <h1 class="text-white font-bold text-2xl modal-title fs-5" id="exampleModalLabel">Reference</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="grid justify-items-start space-x-1 modal-body">
+                            <h4 class="text-center text-sky-900 font-black text-xl" >Grade:100</h4>
+                            <h4 class="text-center text-sky-900 font-black text-xl">Excellent</h4>
+                            <h4 class="text-center text-sky-900 font-black text-xl" >Grade:100</h4>
+                            <h4 class="text-center text-sky-900 font-black text-xl">Excellent</h4>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="px-4 py-2 rounded-md bg-sky-500/75 text-white text-xl font-medium" data-bs-dismiss="modal">Close</button>
