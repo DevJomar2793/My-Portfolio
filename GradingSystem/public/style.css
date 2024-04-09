@@ -584,8 +584,8 @@ video {
   height: 400px;
 }
 
-.h-\[500px\] {
-  height: 500px;
+.h-\[550px\] {
+  height: 550px;
 }
 
 .h-full {
@@ -594,18 +594,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[00px\] {
-  height: 00px;
-}
-
-.h-\[600px\] {
-  height: 600px;
-}
-
-.h-\[550px\] {
-  height: 550px;
 }
 
 .w-\[100px\] {
@@ -620,10 +608,6 @@ video {
   width: 50px;
 }
 
-.w-\[600px\] {
-  width: 600px;
-}
-
 .w-full {
   width: 100%;
 }
@@ -632,20 +616,16 @@ video {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.flex-row {
-  flex-direction: row;
-}
-
-.flex-col {
-  flex-direction: column;
-}
-
 .justify-end {
   justify-content: flex-end;
 }
 
 .justify-center {
   justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .justify-evenly {

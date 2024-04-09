@@ -40,7 +40,7 @@ btnAverage.addEventListener('click', ()=> {
         document.getElementById("resultRemarks").innerHTML = "Passed";
         console.log("passed")
     } 
-    else {
+    else if(totalGrade() <= 74) {
         document.getElementById("resultDescription").innerHTML = "Did not meet expectation";
         document.getElementById("resultRemarks").innerHTML = "Failed";
     }
@@ -48,12 +48,9 @@ btnAverage.addEventListener('click', ()=> {
 
     document.getElementById("resultAverage").innerHTML = totalGrade();
 
-    function inputValidation() {
+    
 
-        sub11 = document.querySelector("#english");
-    }
 
-});
 
 btncloseAverage.addEventListener('click', ()=> {
 
@@ -73,7 +70,7 @@ btncloseAverage.addEventListener('click', ()=> {
     
 
 
-
+});
 
 
 

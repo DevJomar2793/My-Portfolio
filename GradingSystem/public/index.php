@@ -23,20 +23,12 @@
                     <form class="grid grid-cols-2 gap-4" action="">
                         <h3 class="text-center text-sky-900 font-black text-2xl">English:</h3>
                         <input class="w-[100px] text-2xl font-semibold px-2 text-center rounded-md" type="number" name="" id="english">
-                    </form>
-                    <form class="grid grid-cols-2 gap-4" action="">
                         <h3 class="text-center text-sky-900 font-black text-2xl">Math:</h3>
                         <input class="w-[100px] text-2xl font-semibold px-2 text-center rounded-md" type="number" name="" id="math">
-                    </form>
-                    <form class="grid grid-cols-2 gap-4" action="">
                         <h3 class="text-center text-sky-900 font-black text-2xl">Physics:</h3>
                         <input class="w-[100px] text-2xl font-semibold px-2 text-center rounded-md" type="number" name="" id="physics">
-                    </form>
-                    <form class="grid grid-cols-2 gap-4" action="">
                         <h3 class="text-center text-sky-900 font-black text-2xl">Chemistry:</h3>
                         <input class="w-[100px] text-2xl font-semibold px-2 text-center rounded-md" type="number" name="" id="chemistry">
-                    </form>
-                    <form class="grid grid-cols-2 gap-4" action="">
                         <h3 class="text-center text-sky-900 font-black text-2xl">Computer:</h3>
                         <input class="w-[100px] text-2xl font-semibold px-2 text-center rounded-md" type="number" name="" id="computer">
                     </form>
@@ -45,7 +37,7 @@
                     <input class="px-4 py-2 rounded-md bg-sky-500/75 text-white text-xl font-medium" data-bs-toggle="modal" data-bs-target="#averageModal" type="submit" id="averageGrade" name="" value="Average">
                 </div>
             </div>
-            <!--Average Modal-->
+            <!-- Average Modal -->
             <div class="modal fade" id="averageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -68,7 +60,7 @@
                     </div>
                 </div>
             </div>
-            <!--Remarks Reference Modal-->
+            <!-- Remarks Reference Modal -->
             <div class="modal fade" id="remarksModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -76,11 +68,23 @@
                             <h1 class="text-white font-bold text-2xl modal-title fs-5" id="exampleModalLabel">Reference</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="grid justify-items-start space-x-1 modal-body">
-                            <h4 class="text-center text-sky-900 font-black text-xl" >Grade:100</h4>
-                            <h4 class="text-center text-sky-900 font-black text-xl">Excellent</h4>
-                            <h4 class="text-center text-sky-900 font-black text-xl" >Grade:100</h4>
-                            <h4 class="text-center text-sky-900 font-black text-xl">Excellent</h4>
+                        <div class="flex justify-evenly space-x-1 modal-body">
+                            <div class="text-center">
+                                <h1 class="text-sky-900 font-black text-2xl">GRADE</h1>
+                                <h4 class="text-center text-sky-900 font-black text-xl">100 - 90</h4>
+                                <h4 class="text-center text-sky-900 font-black text-xl">89 - 85</h4>
+                                <h4 class="text-center text-sky-900 font-black text-xl">84 - 80</h4>
+                                <h4 class="text-center text-sky-900 font-black text-xl">79 - 75</h4>
+                                <h4 class="text-center text-sky-900 font-black text-xl">74 and below</h4>
+                            </div>
+                            <div class="text-center">
+                                <h1 class="text-sky-900 font-black text-2xl">DESCRIPTION</h1>
+                                <h4 class="text-center text-sky-900 font-black text-xl">Outstanding</h4>
+                                <h4 class="text-center text-sky-900 font-black text-xl">Very Satisfactory</h4>
+                                <h4 class="text-center text-sky-900 font-black text-xl">Satisfactory</h4>
+                                <h4 class="text-center text-sky-900 font-black text-xl">Fairly Satisfactory</h4>
+                                <h4 class="text-center text-sky-900 font-black text-xl">Did not meet expectation</h4>
+                            </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="px-4 py-2 rounded-md bg-sky-500/75 text-white text-xl font-medium" data-bs-dismiss="modal">Close</button>
@@ -89,6 +93,8 @@
                 </div>
             </div>
         </div>
+
+        
     </body>
     <script src="../js/index.js"></script>
 </html>
