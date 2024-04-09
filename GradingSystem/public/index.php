@@ -50,9 +50,9 @@
                         </div>
                         <div class="grid justify-items-start space-x-1 modal-body">
                             <h4 class="text-center text-sky-900 font-black text-2xl" >Your Rating:</h4>
-                            <h4 class="text-center text-sky-900 font-black text-2xl" id="resultDescription">TEST</h4>
+                            <h4 class="text-center text-sky-900 font-black text-2xl" id="resultDescription"></h4>
                             <h4 class="text-center text-sky-900 font-black text-2xl" >Remarks:</h4>
-                            <h4 class="text-center text-sky-900 font-black text-2xl" id="resultRemarks">TEST</h4>
+                            <h4 class="text-center text-sky-900 font-black text-2xl" id="resultRemarks"></h4>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="px-4 py-2 rounded-md bg-sky-500/75 text-white text-xl font-medium" data-bs-dismiss="modal" id="closeAverage">Close</button>

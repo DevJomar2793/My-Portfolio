@@ -28,17 +28,17 @@ btnAverage.addEventListener('click', ()=> {
     else if(totalGrade() <= 89 && totalGrade() >= 85) {
         document.getElementById("resultDescription").innerHTML = "Very Satisfactory";
         document.getElementById("resultRemarks").innerHTML = "Passed";
-        console.log("passed")
+       
     } 
-    else if(totalGrade() >= 80 && totalGrade <= 84) {
+    else if(totalGrade() >= 80 && totalGrade() <= 84) {
         document.getElementById("resultDescription").innerHTML = "Satisfactory";
         document.getElementById("resultRemarks").innerHTML = "Passed";
-        console.log("passed")
+        
     }
     else if(totalGrade() >= 75 && totalGrade() <= 79) {
         document.getElementById("resultDescription").innerHTML = "Fairly Satisfactory";
         document.getElementById("resultRemarks").innerHTML = "Passed";
-        console.log("passed")
+        
     } 
     else if(totalGrade() <= 74) {
         document.getElementById("resultDescription").innerHTML = "Did not meet expectation";
