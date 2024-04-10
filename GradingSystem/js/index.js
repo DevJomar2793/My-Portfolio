@@ -42,7 +42,7 @@ btnAverage.addEventListener('click', ()=> {
     } 
     else if(totalGrade() <= 74) {
         document.getElementById("resultDescription").innerHTML = "Did not meet expectation";
-        document.getElementById("resultRemarks").innerHTML = "Failed";
+        document.getElementById("resultRemarks").innerHTML = "Failed" ;
     }
 
 
