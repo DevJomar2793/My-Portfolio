@@ -1,0 +1,113 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Services</title>
+  </head>
+  <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+          desktop: '1726px',
+          // => @media (min-width: 1726px)
+          laptop: '1280px'
+          // => @media (min-width: 1280px)
+        },
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+  <body class="font-sans">
+    <header class="w-full h-screen bg-cover inset-0 bg-center relative desktop:w-full desktop:relative" style="background-image: url('https://images.unsplash.com/photo-1565182999561-18d7dc61c393?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjQxNDUyfQ&w=1920');">
+      <nav class="flex justify-between fixed top-0 left-0 right-0">
+        <div class="text-center py-4 ">
+          <a href="#">
+            <img src="https://res.cloudinary.com/luxuryp/images/w_1280,c_limit,f_auto,q_auto/tprhoiglqzbp9mbu8x8s/jhsereno-light" alt="" class="w-[170px] h-[50px]">
+          </a>
+        </div>
+        <ul class="hidden laptop:content laptop:flex laptop:justify-center laptop:mx-6 desktop:content desktop:flex desktop:justify-center desktop:mx-6">
+          <li class="text-black font-bold laptop:text-center laptop:text-md laptop:py-6 laptop:px-2 laptop:text-white laptop:[text-shadow:2px_2px_4px_rgba(0,0,0,0.8)] desktop:text-center desktop:text-base desktop:py-6 desktop:px-2 desktop:text-white desktop:[text-shadow:2px_2px_4px_rgba(0,0,0,0.8)]"><a href="">MEET THE TEAM</a></li>
+          <li class="text-black font-bold laptop:text-center laptop:text-md laptop:py-6 laptop:px-2 laptop:text-white laptop:[text-shadow:2px_2px_4px_rgba(0,0,0,0.8)] desktop:text-center desktop:text-base desktop:py-6 desktop:px-2 desktop:text-white desktop:[text-shadow:2px_2px_4px_rgba(0,0,0,0.8)]"><a href="">SEARCH FOR HOMES</a></li>
+          <li class="text-black font-bold laptop:text-center laptop:text-md laptop:py-6 laptop:px-2 laptop:text-white laptop:[text-shadow:2px_2px_4px_rgba(0,0,0,0.8)] desktop:text-center desktop:text-base desktop:py-6 desktop:px-2 desktop:text-white desktop:[text-shadow:2px_2px_4px_rgba(0,0,0,0.8)]"><a href="">OUR COMMUNITIES</a></li>
+          <li class="text-black font-bold laptop:text-center laptop:text-md laptop:py-6 laptop:px-2 laptop:text-white laptop:[text-shadow:2px_2px_4px_rgba(0,0,0,0.8)] desktop:text-center desktop:text-base desktop:py-6 desktop:px-2 desktop:text-white desktop:[text-shadow:2px_2px_4px_rgba(0,0,0,0.8)]"><a href="">HOME VALUATION</a></li>
+          <li class="text-black font-bold laptop:text-center laptop:text-md laptop:py-6 laptop:px-2 laptop:text-white laptop:[text-shadow:2px_2px_4px_rgba(0,0,0,0.8)] desktop:text-center desktop:text-base desktop:py-6 desktop:px-2 desktop:text-white desktop:[text-shadow:2px_2px_4px_rgba(0,0,0,0.8)]"><a href="">SERVICES</a></li>
+          <li class="text-black font-bold laptop:text-center laptop:text-md laptop:py-6 laptop:px-2 laptop:text-white laptop:[text-shadow:2px_2px_4px_rgba(0,0,0,0.8)] desktop:text-center desktop:text-base desktop:py-6 desktop:px-2 desktop:text-white desktop:[text-shadow:2px_2px_4px_rgba(0,0,0,0.8)]"><a href="">HOME ACROSS AMERICA</a></li>
+          <li class="text-black font-bold laptop:text-center laptop:text-md laptop:py-6 laptop:px-2 laptop:text-white laptop:[text-shadow:2px_2px_4px_rgba(0,0,0,0.8)] desktop:text-center desktop:text-base desktop:py-6 desktop:px-2 desktop:text-white desktop:[text-shadow:2px_2px_4px_rgba(0,0,0,0.8)]"><a href="">TESTIMONIALS</a></li>
+          <li class="text-black font-bold laptop:text-center laptop:text-md laptop:py-6 laptop:px-2 laptop:text-white laptop:[text-shadow:2px_2px_4px_rgba(0,0,0,0.8)] desktop:text-center desktop:text-base desktop:py-6 desktop:px-2 desktop:text-white desktop:[text-shadow:2px_2px_4px_rgba(0,0,0,0.8)]"><a href="">CONTACT US</a></li>
+        </ul>
+        <a href="#">
+          <div class="text-center mt-6 pr-10 laptop:hidden desktop:hidden" id="toggle-btn">
+            <i class="text-2xl fa-solid fa-bars"></i>
+          </div>
+        </a>
+      </nav>
+      <ul id="dropdown-menu" class="bg-slate-200 opacity-[.81] hidden">
+        <li class="border-2 border-black text-black font-bold text-2xl text-center"><a href="">MEET THE TEAM</a></li>
+        <li class="border-2 border-black text-black font-bold text-2xl text-center"><a href="">SEARCH FOR HOMES</a></li>
+        <li class="border-2 border-black text-black font-bold text-2xl text-center"><a href="">OUR COMMUNITIES</a></li>
+        <li class="border-2 border-black text-black font-bold text-2xl text-center"><a href="">HOME VALUATION</a></li>
+        <li class="border-2 border-black text-black font-bold text-2xl text-center"><a href="">SERVICES</a></li>
+        <li class="border-2 border-black text-black font-bold text-2xl text-center"><a href="">HOME ACROSS AMERICA</a></li>
+        <li class="border-2 border-black text-black font-bold text-2xl text-center"><a href="">TESTIMONIALS</a></li>
+        <li class="border-2 border-black text-black font-bold text-2xl text-center"><a href="">CONTACT US</a></li>
+      </ul>
+      <div class="w-full font-bold py-4 absolute top-[40%]">
+        <div class="[text-shadow:2px_2px_4px_rgba(0,0,0,0.8)] text-center text-neutral-100 text-6xl md:text-6xl laptop:text-6xl laptop:[text-shadow:2px_2px_4px_rgba(0,0,0,0.8)]">
+          <h1>SERVICES</h1>
+        </div>
+      </div>
+      <div class="w-full flex justify-between p-2 bg-[#585454] absolute bottom-0 left-0">
+        <div class="p-2 flex justify-between">
+          <a href="">
+            <i class="fa-solid fa-magnifying-glass text-md text-white"></i>  
+          </a>
+          <h4 class="text-slate-50 ml-2">Search by Address or Area</h4>
+        </div>
+        <div class="p-2">
+          <h4 class="text-slate-100">BOOK AN APPOINTMENT</h4>
+        </div>
+      </div>
+    </header>
+
+    <main class="w-full h-full">
+      <div class="border-2 border-black">
+        <div class="text-center text-4xl my-10 font-bold ">
+          <h4>Comprehensive Marketing Plan</h4>
+        </div>
+        <div class="laptop:flex laptop:justify-evenly desktop:flex desktop:justify-evenly">
+          <div class="text-center">
+            <img src="https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/rmtn3r5zpsljdsncbwa4/image-007" class="mx-auto w-[200px] h-[200px] mb-1" alt="">
+            <h4 class="font-bold text-2xl my-2 lg:text-4xl">Responsive</h4>
+            <p class="mb-4 lg:text-md">I am always available via phone, text, or email.</p>
+          </div>
+          <div class="text-center">
+            <img src="https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/ks8ztlvw2b35q5qgs6xn/image-011" class="mx-auto w-[170px] h-[200px] mb-1" alt="">
+            <h4 class="font-bold text-2xl my-2 lg:text-4xl">Syndication</h4>
+            <p class="mb-4 lg:text-md">I market your property locally, nationally, and internationally</p>
+          </div>
+        </div>
+      
+      </div>
+      
+    </main>
+    
+  </body>
+  <script>
+    
+    const toggleBtn = document.querySelectorAll('#toggle-btn');
+    const toggleBtnIcon = document.querySelectorAll('#toggle-btn i');
+    const dropDownMenu = document.querySelector('#dropdown-menu');
+
+      toggleBtnIcon.addEventListener('click', () => {
+        dropDownMenu.classList.toggle('hidden');
+      });
+
+  </script>
+  </html> 
