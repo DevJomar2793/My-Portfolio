@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
   <html lang="en">
   <head>
       <meta charset="UTF-8">
@@ -48,7 +48,9 @@
           </div>
         </a>
       </nav>
-      <ul id="dropdown-menu" class="bg-slate-200 opacity-[.81] hidden">
+
+      <!--Mobile Menu-->
+      <ul id="dropdown-menu" class="bg-slate-200 opacity-[.81] hidden absolute top-[10%] right-0 w-full laptop:hidden desktop:hidden">
         <li class="border-2 border-black text-black font-bold text-lg text-center"><a href="">MEET THE TEAM</a></li>
         <li class="border-2 border-black text-black font-bold text-lg text-center"><a href="">SEARCH FOR HOMES</a></li>
         <li class="border-2 border-black text-black font-bold text-lg text-center"><a href="">OUR COMMUNITIES</a></li>
@@ -108,29 +110,70 @@
             <p class="mb-4 lg:text-md">Beatiful, high-end photography is a central part of our marketing plan for your property.</p>
           </div>
         </div>
-        <div class="border-2 border-red-500 laptop:flex laptop:justify-center laptop:mx-10">
-          <div class="bg-black h-[400px] flex justify-center align-center laptop:w-[600px]">
-            <div class="self-center w-[200px] h-[100px]">
-              <h4 class="text-white text-center text-4xl font-bold">Decor <br />Guidance</h4>
-            </div>
+      </div>
+      <div class="laptop:flex laptop:justify-center laptop:mt-8">
+        <div class="flex justify-center align-center w-[400px] h-[100px] laptop:w-[400px] laptop:h-[400px] bg-black mx-auto laptop:m-0">
+          <div class="self-center w-[150px] h-[70px]">
+            <h4 class="text-center font-bold text-2xl text-white leading-normal">Decor <br /> Guidance</h4>
           </div>
-          <div class="mx-auto">
-            <img src="https://res.cloudinary.com/luxuryp/images/w_1280,c_limit,f_auto,q_auto/ghtq7jtce7tsgdjtosrs/image-025 alt=" alt="" class="h-[400px]">
+        </div>
+        <div class="laptop:m-0">
+          <img src="https://res.cloudinary.com/luxuryp/images/w_1280,c_limit,f_auto,q_auto/ghtq7jtce7tsgdjtosrs/image-025" alt="" class="w-[400px] h-[400px] mx-auto">
+        </div>
+      </div>
+      <div class="laptop:flex laptop:justify-center">
+        <div class="laptop:m-0">
+          <img src="https://res.cloudinary.com/luxuryp/images/w_1280,c_limit,f_auto,q_auto/axx0whb7xfmlwhvcckrr/image-023" alt="" class="w-[400px] h-[400px] mx-auto">
+        </div>
+        <div class="flex justify-center align-center mx-auto w-full h-full laptop:w-[400px] laptop:h-[400px] laptop:m-0">
+          <div class="self-center w-full h-full p-6">
+            <h4 class="text-center font-bold text-4xl text-black mb-2 laptop:text-3xl desktop:text-3xl">My Staging Expertise</h4>
+            <ol class="list-disc list-inside leading-normal">
+              <li class="indent-24 laptop:indent-8">Unclutter and organize your home</li>
+              <li class="indent-24 laptop:indent-8">Neatly arrange drawers and cabinets</li>
+              <li class="indent-24 laptop:indent-8">keep pets outdoors or off the premises</li>
+              <li class="indent-24 laptop:indent-8">play soft music</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="laptop:flex laptop:justify-center">
+        <div class="flex justify-center align-center w-[400px] h-[100px] laptop:w-[400px] laptop:h-[400px] bg-black mx-auto laptop:m-0">
+          <div class="self-center w-[150px] h-[70px]">
+            <h4 class="text-center font-bold text-2xl text-white leading-normal">Intentional <br /> Layout</h4>
+          </div>
+        </div>
+        <div class="laptop:m-0">
+          <img src="https://res.cloudinary.com/luxuryp/images/w_1280,c_limit,f_auto,q_auto/tvntwvzwsjyi3ndwtpux/image-022" alt="" class="w-[400px] h-[400px] mx-auto">
+        </div>
+      </div>
+      <div class="laptop:flex laptop:justify-center">
+        <div class="laptop:m-0">
+          <img src="https://res.cloudinary.com/luxuryp/images/w_1280,c_limit,f_auto,q_auto/lpaq7euqjebackcuwsdu/image-024" alt="" class="w-[400px] h-[400px] mx-auto">
+        </div>
+        <div class="flex justify-center align-center mx-auto w-full h-full laptop:w-[400px] laptop:h-[400px] laptop:m-0">
+          <div class="self-center w-full h-full p-6">
+            <ol class="list-disc list-inside leading-normal">
+              <li class="indent-24 laptop:indent-8">Unclutter and organize your home</li>
+              <li class="indent-24 laptop:indent-8">Neatly arrange drawers and cabinets</li>
+              <li class="indent-24 laptop:indent-8">keep pets outdoors or off the premises</li>
+              <li class="indent-24 laptop:indent-8">play soft music</li>
+            </ol>
           </div>
         </div>
       </div>
     </main>
-    
   </body>
   <script>
     
-    const toggleBtn = document.querySelectorAll('#toggle-btn');
-    const toggleBtnIcon = document.querySelectorAll('#toggle-btn i');
-    const dropDownMenu = document.querySelector('#dropdown-menu');
+    const toggleBtn = document.getElementById('toggle-btn');
+    const dropDownMenu = document.getElementById('dropdown-menu');
 
-      toggleBtnIcon.addEventListener('click', () => {
+      toggleBtn.addEventListener('click', () => {
         dropDownMenu.classList.toggle('hidden');
       });
 
   </script>
-  </html> 
+  </html>
+
+  
