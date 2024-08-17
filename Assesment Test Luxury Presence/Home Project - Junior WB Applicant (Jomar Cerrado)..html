@@ -26,7 +26,7 @@
   </script>
   <body class="font-sans">
     <header class="w-full h-screen bg-cover inset-0 bg-center relative bg-[url('https://images.unsplash.com/photo-1565182999561-18d7dc61c393?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjQxNDUyfQ&w=1920')] bg-cover bg-center opacity-[.81] desktop:w-full desktop:relative">
-      <nav class="flex justify-between fixed top-0 left-0 right-0">
+      <nav id="navbar" class="flex justify-between bg-transparent fixed top-0 left-0 right-0">
         <div class="text-center py-4 ">
           <a href="#">
             <img src="https://res.cloudinary.com/luxuryp/images/w_1280,c_limit,f_auto,q_auto/tprhoiglqzbp9mbu8x8s/jhsereno-light" alt="" class="w-[170px] h-[50px]">
@@ -196,22 +196,22 @@
       <div class="text-6xl text-white text-center py-12">
         <h4>The Buying Process</h4>
       </div>
-      <div class="w-[1000px] mx-auto bg-zinc-950/80 grid laptop:grid-cols-2 desktop:grid-cols-3">
+      <div class="w-[600px] mx-auto bg-zinc-950/80 grid laptop:grid-cols-2 laptop:w-[1000px] desktop:grid-cols-3">
         <div class="text-white text-center py-6 laptop:border-r-4 laptop:border-white desktop:border-r-4 desktop:border-white">
           <h1 class="text-4xl font-bold mb-6 laptop:text-6xl">1</h1>
           <p class="laptop:text-xl font-bold">INITIAL CONSULATION & PLANNING</p>
         </div>
         <div class="text-white text-center py-5 desktop:border-r-4 desktop:border-white">
           <h1 class="text-4xl font-bold mb-6 laptop:text-6xl">2</h1>
-          <p class="laptop:text-xl font-bold">DEVISE & EXECUTE MARKETING PLAN</p>
+          <p class="laptop:text-xl font-bold">SEARH FOR A HOME & GET PRE-APPROVED</p>
         </div>
         <div class="text-white text-center py-5 laptop:border-r-4 laptop:border-white">
           <h1 class="text-4xl font-bold mb-6 laptop:text-6xl">3</h1>
-          <p class="laptop:text-xl font-bold">REVIEW OFFERS & REACH AGREEMENT WITH BUYER</p>
+          <p class="laptop:text-xl font-bold">SUBMIT AN OFFER</p>
         </div>
-        <div class="text-white text-center py-5 desktop:border-r-4 desktop:border-white">
+        <div class="text-white text-center py-5 mb-4 laptop:px-6 laptop:mb-6 desktop:border-r-4 desktop:border-white">
           <h1 class="text-4xl font-bold mb-6 laptop:text-6xl">4</h1>
-          <p class="laptop:text-xl font-bold">COMPLETE TRANSACTION PROCESS</p>
+          <p class="laptop:text-xl font-bold">COMPLETE SETTLEMENT PROCESS</p>
         </div>
       </div>
     </section>
@@ -221,7 +221,9 @@
   
   </body>
   <script>
-    
+  
+    // DropDown Menu
+
     const toggleBtn = document.getElementById('toggle-btn');
     const dropDownMenu = document.getElementById('dropdown-menu');
 
@@ -229,6 +231,23 @@
         dropDownMenu.classList.toggle('hidden');
       
       });
+
+      //Scroll Down Navbar
+      window.addEventListener('scroll', () => {
+        const navBar = document.getElementById('navbar');
+
+        if(window.scrollY > 50) {
+          navBar.classList.add('laptop:bg-black');
+          navBar.classList.add('laptop:text-white')
+          navBar.classList.remove('bg-transparent');
+        } 
+        
+        else {
+          navBar.classList.add('laptop:bg-transparent')
+          navBar.classList.add('laptop:text-black');
+          navBar.classList.remove('bg-black')
+        }
+      })
 
   </script>
   </html>
