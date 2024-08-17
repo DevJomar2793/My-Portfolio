@@ -236,16 +236,16 @@
       window.addEventListener('scroll', () => {
         const navBar = document.getElementById('navbar');
 
-        if(window.scrollY > 50) {
+        if(window.scrollY >= 850) {
           navBar.classList.add('laptop:bg-black');
           navBar.classList.add('laptop:text-white')
-          navBar.classList.remove('bg-transparent');
+          navBar.classList.remove('laptop:bg-transparent');
         } 
         
         else {
           navBar.classList.add('laptop:bg-transparent')
           navBar.classList.add('laptop:text-black');
-          navBar.classList.remove('bg-black')
+          navBar.classList.remove('laptop:bg-black')
         }
       })
 
